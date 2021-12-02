@@ -1,0 +1,72 @@
+[
+  {
+    "title": "Here Now",
+    "artists": ["Hillsong United"],
+    "releaseYear": 2016,
+    "genres" : ["Christian", "Pop"]
+  },
+
+  {
+    "title": "Savage",
+    "artists": ["Megan Thee Stallion"],
+    "releaseYear": 2020,
+    "genres" : ["Hip-Hop", "Rap"]
+  },
+
+  {
+    "title": "Dynamite",
+    "artists": ["BTS"],
+    "releaseYear": 2020,
+    "genres" : ["Disco", "Pop"]
+  },
+
+  {
+    "title": "I Feel It Coming",
+    "artists": ["The Weeknd"],
+    "releaseYear": 2016,
+    "genres" : ["Alternative", "Soul"]
+  },
+
+  {
+    "title": "Like I Can",
+    "artists": ["Sam Smith"],
+    "releaseYear": 2014,
+    "genres" : ["Pop", "Indie"]
+  },
+
+
+  {
+    "title": "Breathe Deeper",
+    "artists": ["Tame Impala"],
+    "releaseYear": 2020,
+    "genres" : ["Alternative", "Indie"]
+  },
+
+  {
+    "title": "The Bigger Picture",
+    "artists": ["Lil Baby"],
+    "releaseYear": 2020,
+    "genres" : ["Hip-Hop", "Rap"]
+  },
+
+  {
+    "title": "Mood",
+    "artists": ["24kGoldn"],
+    "releaseYear": 2020,
+    "genres" : ["Pop"]
+  },
+
+  {
+    "title": "Rain On Me",
+    "artists": ["Lady Gaga"],
+    "releaseYear": 2020,
+    "genres" : ["Pop"]
+  },
+
+  {
+    "title": "Laugh Now Cry Later",
+    "artists": ["Drake", "Lil Durk"],
+    "releaseYear": 2020,
+    "genres" : ["Hip-Hop", "Rap"]
+  }
+]

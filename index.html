@@ -1,0 +1,105 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>JSON songList</title>
+<script   src="https://code.jquery.com/jquery-3.1.1.min.js"   integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="   crossorigin="anonymous"></script>
+
+</head>
+
+<body>
+	
+	<div id="rawStr"> &nbsp; <div>
+
+	<select name="sort" id="sort">
+						<option>Filter by genre</option>
+						<option value="Pop">Pop</option>
+						<option value="Folk">Folk</option>
+						<option value="Christian">Christian</option>
+						<option value="Soul">Soul</option>
+						<option value="Hip-Hop">Hip-Hop</option>
+						<option value="Rap">Rap</option>
+						<option value="Disco">Disco</option>
+						<option value="Indie">Indie</option>
+						<option value="Alternative">Alternative</option>
+	</select><br />
+
+	<input type="button" value="Filter" onclick="whenClicked()">
+
+
+	<div id="songList"> &nbsp; <div>
+
+	<script language="javascript">
+				$.get("https://cristy8344.github.io/CS20Assignment9/songList.json",
+				function( data ) {
+				 setList = JSON.stringify(data);
+
+				 strSetList = "<br>";
+
+				 data.forEach(function(song) {
+
+					 strSetList +=  "<br> <strong>" + song.title + "</strong> <br>"
+
+					 + "Artist(s): " + song.artists[0];
+
+					 for (i = 1; i < song.artists.length; i++){
+							strSetList += ", &nbsp;" + song.artists[i];
+						}
+
+						strSetList += "<br> Genre(s): " +  song.genres[0];
+
+						for (i = 1; i < song.genres.length; i++){
+							 strSetList += ", &nbsp;" + song.genres[i];
+						 }
+
+						 strSetList += "<br> Released: " + song.releaseYear + "<br>";
+
+				 })
+				 document.getElementById("songList").innerHTML = strSetList + "<br>";
+
+			 })
+
+			 function whenClicked() {
+
+				 option = $("select").find("option:selected").val();
+
+				 $.get("https://cristy8344.github.io/CS20Assignment9/songList.json",
+				 function( data ) {
+					setList = JSON.stringify(data);
+
+					strSetList = "<br>";
+
+					data.forEach(function(song) {
+
+						for (i = 0; i < song.genres.length; i++){
+								if (option == song.genres[i]){
+									strSetList +=  "<br> <strong>" + song.title + "</strong> <br>"
+
+									+ "Artist(s): " + song.artists[0];
+
+									for (i = 1; i < song.artists.length; i++){
+										 strSetList += ", &nbsp;" + song.artists[i];
+									 }
+
+									 strSetList += "<br> Genre(s): " +  song.genres[0];
+
+									 for (i = 1; i < song.genres.length; i++){
+											strSetList += ", &nbsp;" + song.genres[i];
+										}
+
+										strSetList += "<br> Released: " + song.releaseYear + "<br>";
+								}
+						 }
+
+				   })
+
+						document.getElementById("songList").innerHTML = strSetList + "<br>";
+
+
+	  	})
+		}
+
+
+		</script>
+</body>
+</html>
